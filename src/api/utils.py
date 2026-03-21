@@ -35,3 +35,10 @@ def filter_scope_series(monthly_df: pd.DataFrame, scope: str) -> pd.Series:
         .sort_index()
     )
     return series
+
+from src.config import get_settings
+
+settings = get_settings()
+MODEL_DIR = Path(settings.model_dir)
+DATA_DIR = Path(settings.data_dir)
+
